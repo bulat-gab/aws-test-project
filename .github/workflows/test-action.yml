@@ -10,9 +10,10 @@ on:
     branches: [ "bulat-gab-patch-1" ]
 
 jobs:
-  deployment:
+  build:
 
     runs-on: ubuntu-latest
+    environment: deployment
 
     steps:
     - uses: actions/checkout@v3
