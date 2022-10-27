@@ -14,6 +14,8 @@ jobs:
 
     runs-on: ubuntu-latest
     environment: deployment
+    env:
+      AWS_KEY: ${{ env.TEST_VAR }}
 
     steps:
     - uses: actions/checkout@v3
@@ -22,4 +24,4 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: echo ${{ env.TEST_VAR }}
+      run: echo "Hello world"
