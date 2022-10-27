@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: deployment
     env:
-      AWS_KEY: ${{ env.TEST_VAR }}
+      AWS_KEY: ${{ secrets.TEST_VAR }}
 
     steps:
     - uses: actions/checkout@v3
